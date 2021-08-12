@@ -1,0 +1,67 @@
+{% extends "poll/base.html" %}
+{% load static %}
+{% block title %}استيبان  خيار وسيلة النقل{% endblock %}
+
+{% block main %}
+  <div class="introduction">
+    <div class="container">
+      <img class="intro_pic" src="{% static 'images/Introduction_Picture2.png' %}"   alt="khobar map">
+    </div>
+      <p dir ="rtl">السلام عليكم ورحمة الله وبركاته</p>
+      <p dir ="rtl">هذا الاستبيان يهدف لمعرفة تفضيل أعضاء المجتمع لاستخدام الباص في المشاوير اليومية من خلال عرض سيناريوات افتراضية لرحلات
+      يومية يمكن اتمامها إما بالباص أو السيارة الشخصية.</p>
+      <h2>مقدمة</h2>
+      <p dir = "rtl">  لا يخفى على الجميع حرارة الجو في  السعودية صيفا, خصوصا في حاضرة الدمام حيث يتسم موسم الصيف بارتفاع درجات الحرارة وما يصاحبها
+      من رطوبة عالية, تجعل الكثير من سكان حاضرة الدمام يستبعدون احتمالية اقبالهم على شبكات النقل عموما والباصات تحديدا في حال توفرت الخدمة, نظير
+    حاجة المستخدمين للمشي لحطات الباص في بيئة عمرانية لا تشجع المشي ولا تشمل على تدخلات لتظليل ممرات المشاة أو غيرها من إجراءات تلطيف
+    الجو في الفضاء العام.</p>
+  </div>
+  <div class="x">
+
+    <h2>طريقة الأسئلة</h2>
+      <p dir = "rtl">سيتم عرض سؤالين في كل واحدة منها سيناريو افتراضي لرحلة في الخبر الشمالية ترغب بالقيام بها مع توفر وسيلتي نقل أمامك إما بالمشي لمحطة الباص أو باستخدام السيارة الشخصية, كما سيتم توضيح حالة الطقس الذي تتم فيه هذا الرحلة الافتراضية, فإما أن تكون في جو حار مع رطوبة في عز الصيف أو في جو معتدل في الشتاء على سبيل المثال.</p>
+      <div class="container">
+        <img class="khobar_streets" src="{% static 'images/khobar_streets.png' %}"   alt="khobar streets" style = "position: relative; max-width: 100%; max-height: 100vh; margin: auto;">
+      </div>
+
+      <h3>الخيار الأول: رحلة الباص</h3>
+      <div class="container" style="white-space:nowrap">
+        <div class="text" style="display:inline;">
+          <p dir = "rtl">رحلة الباص مكونة من أربعة متغيرات رئيسية:</p>
+          <p dir = "rtl">1) مدة المشي لمحطة الباص</p>
+          <p dir = "rtl">2) وقت انتظار الباص</p>
+          <p dir = "rtl">3) تكلفة رحلة الباص أو التذكرة</p>
+          <p dir = "rtl">4) مدة مشوار الباص من المحطة إلى الوجهة النهائية</p>
+          <p dir = "rtl">ملاحظة: سنفترض أن الباص يتوقف عند الوجهة النهائية  ولا يوجد وقت للمشي من الباص إلى الوجهة </p>
+        </div>
+        <div class="image" style="display:inline;">
+          <img class="bus_trip_pic" src="{% static 'images/bus_trip.png' %}"   alt="Bus Trip" width="500" height= auto>
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="car_container" >
+    <h3>الخيار الثاني: رحلة السيارة</h3>
+    <div class="car_container_text">
+      <p dir = "rtl">رحلة السيارة مكونة من متغيرين رئيسيين للرحلة:</p>
+      <p dir = "rtl">1) مدة الرحلة</p>
+      <p dir = "rtl">2) تكلفة وقوف السيارة في المواقف</p>
+    </div>
+    <div class="car_container_pic">
+      <img class="car_trip_pic" src="{% static 'images/car_trip.png' %}" alt="Car Trip" width="500" height= auto>
+    </div>
+  </div>
+
+      <div>
+        <form method = "POST" dir ="rtl">
+          {% csrf_token %}
+          {{ confirmation_status }}
+          <input type = "submit" value = "أؤكد رغبتي في المشاركة في الاستبيان">
+        </form>
+      </div>
+
+
+  </div>
+{% endblock %}

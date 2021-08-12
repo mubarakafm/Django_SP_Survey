@@ -1,0 +1,54 @@
+{% extends "poll/base.html" %}
+
+{% block main %}
+
+
+
+  <div class="Q1">
+      <h1>السؤال الأول</h1>
+      <div class="hot_weather">
+        <h3>حالة الطقس: حرارة مرتفعة مع رطوبة عالية</h3>
+      </div>
+
+      <table>
+      <tr>
+        <th>تكلفة رحلة الباص</th>
+
+        <th>مدة الرحلة على الباص</th>
+        <th>مدة الانتظار</th>
+        <th>مدة المشي إلى المحطة</th>
+        <th rowspan="2">&nbsp; رحلة الباص</th>
+      </tr>
+      <tr dir = "rtl">
+
+        <td>{{ price_bus }} ريال </td>
+
+        <td>{{ time_bus }} دقائق</td>
+        <td>{{ time_wait_bus }} دقائق</td>
+        <td>{{ time_walk_to_station }} دقائق</td>
+      </tr>
+      </table>
+      <h2></h2>
+      <table>
+      <tr>
+        <th>تكلفة الموقف</th>
+        <th>وقت الرحلة في السيارة</th>
+        <th rowspan="2">&nbsp;رحلة السيارة</th>
+      </tr>
+      <tr dir = "rtl">
+        <td>{{ price_car }} ريال </td>
+        <td>{{ time_car }} دقائق</td>
+
+      </tr>
+
+      </table>
+
+  </div>
+  <p></p>
+  <form method = "POST" dir = "rtl">
+    {% csrf_token %}
+    {{ question1_answer }}
+    <input type = "submit" id ="question1_answer" name = "question1_answer" value = "تأكيد الإجابة">
+  </form>
+
+{% endblock %}

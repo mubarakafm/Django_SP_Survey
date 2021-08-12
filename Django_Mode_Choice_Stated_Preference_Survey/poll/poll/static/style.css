@@ -1,0 +1,146 @@
+.navbar-default, .btn, .form-control, .panel {
+	border-radius: 0;
+	text-align: center;
+	align-items: right;
+}
+
+.navbar-default {
+    background-color: #5F9EA0;
+    border-color: rgba(245, 245, 220, .6);
+    box-shadow: 0px 3px 3px 0px #ddd;
+		text-align: center;
+
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: rgba(245, 245, 220, .9);
+    border-bottom: 4px solid #ddd;
+
+}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: rgba(245, 245, 220, .7);
+    border-color: rgba(245, 245, 220, .6);
+    border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+}
+.panel-footer {
+	background-color: rgba(245, 245, 220, .5);
+    border-color: rgba(245, 245, 220, .4);
+
+}
+.panel {
+	box-shadow: 0px 3px 3px 0px #ddd;
+	align-items: center;
+}
+.navbar-brand{
+	text-align: center;
+	font-weight: bold;
+
+}
+.panel-title {
+	font-weight: bolder;
+	text-align: center;
+
+}
+.container{
+	position: relative;
+  width: 100%;
+  text-align: right;
+	margin: 3px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body{
+	background-color: #F0F8FF;
+}
+
+.navbar-brand{
+	text-align: center;
+
+}
+
+
+table {
+	margin: auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+
+
+}
+
+.intro_pic {
+	position: relative;
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+	}
+
+.khobar_streets {
+	position: relative;
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+}
+
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 4px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+	padding: 4px;
+}
+
+form{
+	display: inline-block;
+}
+
+
+
+li{
+  display: inline-block;
+  }
+
+
+
+.hot_weather{
+	align-self: stretch;
+	font-weight: bold;
+	color: red;
+
+}
+
+.cool_weather{
+
+	font-weight: bold;
+	color: blue;
+
+}
+
+.car_container{
+	position: relative;
+
+}
+
+.car_container_text{
+	position: absolute;
+	right: 0;
+}
+
+.car_container_pic{
+right: 10px;
+}
